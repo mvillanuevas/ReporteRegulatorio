@@ -39,6 +39,11 @@ Dim foundCell : Set foundCell = nRange.Find("BL29",,xlValues,xlPart)
 
 fechaActual = DateSerial(Year(Date), Month(Date), Day(Date))
 
+' Si la longitud de la variable "Folio" es menor a 6, agregar ceros a la izquierda con la cantidad de dígitos necesarios
+If Len(Folio) < 6 Then
+    Folio = Right(String(6, "0") & Folio, 6)
+End If
+
 
 If Not foundCell Is Nothing Then
     rowNumber = foundCell.Row
@@ -47,7 +52,7 @@ If Not foundCell Is Nothing Then
     For i = 6 To objWorkbookSheetOH.Cells(rowNumber, objWorkbookSheetOH.Columns.Count).End(-4159).Column Step 3
         ' Verificar si la celda contiene un valor numérico
         If objWorkbookSheetOH.Cells(rowNumber, i).Value <> 0 And  objWorkbookSheetOH.Cells(rowNumber, i).Value <> "-" Then
-            objWorkbookSheetRef.Cells(filaOH, 3).Value = Folio
+            objWorkbookSheetRef.Cells(filaOH, 3).Value = "'" & Folio
             ' Fecha actual
             'objWorkbookSheetRef.Cells(filaOH, 4).Value = Right("0" & Day(Date), 2) & "/" & Right("0" & Month(Date), 2) & "/" & Year(Date)
             objWorkbookSheetRef.Cells(filaOH, 4).Value = fechaActual
