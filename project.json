@@ -101,6 +101,8 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {},
+  "publishData": {
+    "iconUrl": ".package/Isotipo-repsol.png"
+  },
   "targetFramework": "Windows"
 }
