@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Cq2_LwLAQUC3jpI7doDQKg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="9ee8db0a-cf90-4d8e-860e-6167616a3b36" CvTextArea="63, 64, 45, 13" CvTextArgument="Archivo" CvType="Text" DesignTimeRectangle="60, 56, 54, 30" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Barra de herramientas Ribbon' /&gt;&lt;uia automationid='FileTabButton' cls='NetUIRibbonTab' name='Pestaña Archivo' /&gt;" Guid="772e2efc-470c-46e6-a0b3-0a65e8671077" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='Bandeja de entrada - manuel.villanueva@servexternos.repsol.com -*' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="9ee8db0a-cf90-4d8e-860e-6167616a3b36" CvElementArea="1321, 58, 45, 24" CvTextArea="122, 63, 1195, 14" CvTextArgument="Inicio Enviar y recibir Vista Ayuda Pruebe el nuevo Outlook" CvType="Button" DesignTimeRectangle="114, 56, 1260, 30" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Barra de herramientas Ribbon' matching:helpText='fuzzy' fuzzylevel:helpText='0.0' /&gt;&lt;uia cls='NetUIPanViewer' name='Pestaña de la cinta de opciones' role='Panel' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:fulltext='Inicio&amp;#x9;Enviar y recibir&amp;#x9;Vista&amp;#x9;Ayuda&amp;#x9;Pruebe el nuevo Outlook' /&gt;" Guid="31fece07-ff5d-4d42-9bf2-8ca5b5197228" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="76000f521153bf6da73d91c65b348e74.png" xmlns="">0W30OlQqg5ECWbBD5B6FZog</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Inicio Enviar y recibir…",
+  "Type": "Element",
+  "Id": "uhyspO3OP021JFUB-oZqeA",
+  "Reference": "Cf07JwYvEkuJqoqAAR1IDA/uhyspO3OP021JFUB-oZqeA",
+  "ParentRef": "Cf07JwYvEkuJqoqAAR1IDA/Pac05QSamE2VgVxLwnsrpw",
+  "Created": "2025-07-23T04:48:28.7313171Z",
+  "Updated": "2025-07-23T04:48:28.7313171Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
