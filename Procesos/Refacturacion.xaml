@@ -159,7 +159,7 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Refacturacion" sap:VirtualizedContainerService.HintSize="1180,838.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Refacturacion" sap:VirtualizedContainerService.HintSize="1489,838.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="WorkBookPathRefacturacion" />
     </Sequence.Variables>
@@ -201,27 +201,33 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <TryCatch DisplayName="Try Catch Copy File" sap:VirtualizedContainerService.HintSize="515,837" sap2010:WorkflowViewState.IdRef="TryCatch_14">
+        <TryCatch DisplayName="Try Catch Copy File" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="TryCatch_14">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <TryCatch.Try>
-            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,351" sap2010:WorkflowViewState.IdRef="Sequence_54">
+            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,294" sap2010:WorkflowViewState.IdRef="Sequence_54">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="479,114" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="Assign_7">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[WorkBookPathOverheadMonth]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[in_Config("CarpetaOutput").ToString() + in_Config("OHFile").ToString()]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[in_Config("CarpetaInput").ToString() + in_Config("OHFile").ToString()]</InArgument>
                 </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
               </Assign>
               <ui:CopyFile ContinueOnError="{x:Null}" Destination="[WorkBookPathOverheadMonth]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="479,177" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[WorkBookPathOverhead_Temp]" />
             </Sequence>
@@ -276,10 +282,10 @@
             </Sequence>
           </TryCatch.Finally>
         </TryCatch>
-        <TryCatch DisplayName="Try Catch Overhead" sap:VirtualizedContainerService.HintSize="515,829" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+        <TryCatch DisplayName="Try Catch Overhead" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="TryCatch_13">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -390,7 +396,7 @@
             </Sequence>
           </TryCatch.Finally>
         </TryCatch>
-        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="515,57" sap2010:WorkflowViewState.IdRef="Delay_14">
+        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Delay_14">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -398,7 +404,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Delay>
-        <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="515,48" sap2010:WorkflowViewState.IdRef="KillProcess_15" ProcessName="EXCEL">
+        <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="KillProcess_15" ProcessName="EXCEL">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -417,7 +423,7 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Assign DisplayName="Assign &lt;&gt;NC" sap:VirtualizedContainerService.HintSize="470,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign DisplayName="Assign &lt;&gt;NC" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[TipoDocto]</OutArgument>
           </Assign.To>
@@ -431,21 +437,21 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Assign>
-        <TryCatch DisplayName="Try Catch Copy File Layout" sap:VirtualizedContainerService.HintSize="470,696" sap2010:WorkflowViewState.IdRef="TryCatch_18">
+        <TryCatch DisplayName="Try Catch Copy File Layout" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="TryCatch_18">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <TryCatch.Try>
-            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="468,408" sap2010:WorkflowViewState.IdRef="Sequence_63">
+            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,408" sap2010:WorkflowViewState.IdRef="Sequence_63">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_9">
+              <Assign sap:VirtualizedContainerService.HintSize="479,114" sap2010:WorkflowViewState.IdRef="Assign_9">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[WorkBookPathRefacturacion]</OutArgument>
                 </Assign.To>
@@ -459,8 +465,8 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </Assign>
-              <ui:CopyFile ContinueOnError="False" Destination="[WorkBookPathRefacturacion]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="CopyFile_4" Overwrite="True" Path="[WorkBookPathRefacturacion_Temp]" />
-              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="Delay_13">
+              <ui:CopyFile ContinueOnError="False" Destination="[WorkBookPathRefacturacion]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="479,186" sap2010:WorkflowViewState.IdRef="CopyFile_4" Overwrite="True" Path="[WorkBookPathRefacturacion_Temp]" />
+              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="479,48" sap2010:WorkflowViewState.IdRef="Delay_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -476,10 +482,10 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,25" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,287" sap2010:WorkflowViewState.IdRef="Sequence_64">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -511,7 +517,7 @@
             </Catch>
           </TryCatch.Catches>
           <TryCatch.Finally>
-            <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="468,89" sap2010:WorkflowViewState.IdRef="Sequence_65">
+            <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="513,89" sap2010:WorkflowViewState.IdRef="Sequence_65">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -520,12 +526,12 @@
             </Sequence>
           </TryCatch.Finally>
         </TryCatch>
-        <Assign sap:VirtualizedContainerService.HintSize="470,114" sap2010:WorkflowViewState.IdRef="Assign_8">
+        <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_8">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[WorkBookPathFact]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">[in_Config("CarpetaOutput").ToString() + in_Config("LayoutFact").ToString()]</InArgument>
+            <InArgument x:TypeArguments="x:String">[in_Config("CarpetaInput").ToString() + in_Config("LayoutFact").ToString()]</InArgument>
           </Assign.Value>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -534,7 +540,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Assign>
-        <TryCatch DisplayName="Try Catch Main" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <TryCatch DisplayName="Try Catch Main" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="TryCatch_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -652,7 +658,7 @@
             </Sequence>
           </TryCatch.Finally>
         </TryCatch>
-        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="Delay_4">
+        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Delay_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -660,7 +666,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Delay>
-        <TryCatch DisplayName="Try Catch PEP" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+        <TryCatch DisplayName="Try Catch PEP" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="TryCatch_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -771,7 +777,7 @@
             </Sequence>
           </TryCatch.Finally>
         </TryCatch>
-        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="Delay_5">
+        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Delay_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -779,7 +785,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Delay>
-        <TryCatch DisplayName="Try Catch Copy Columns" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+        <TryCatch DisplayName="Try Catch Copy Columns" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="TryCatch_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -891,7 +897,7 @@
             </Sequence>
           </TryCatch.Finally>
         </TryCatch>
-        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="Delay_6">
+        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Delay_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -899,7 +905,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Delay>
-        <TryCatch DisplayName="Try Catch Format" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+        <TryCatch DisplayName="Try Catch Format" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="TryCatch_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1012,7 +1018,7 @@
             </Sequence>
           </TryCatch.Finally>
         </TryCatch>
-        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="Delay_7">
+        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Delay_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1020,7 +1026,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Delay>
-        <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[WorkBookPathRefacturacion]">
+        <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[WorkBookPathRefacturacion]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1028,7 +1034,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:DeleteFileX>
-        <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="KillProcess_14" ProcessName="EXCEL">
+        <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="KillProcess_14" ProcessName="EXCEL">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1036,7 +1042,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:KillProcess>
-        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="470,48" sap2010:WorkflowViewState.IdRef="Delay_15">
+        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="Delay_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1152,13 +1158,19 @@
             </Sequence>
           </TryCatch.Finally>
         </TryCatch>
-        <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Assign_4">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[WorkBookPathNC]</OutArgument>
           </Assign.To>
           <Assign.Value>
-            <InArgument x:TypeArguments="x:String">[in_Config("CarpetaOutput").ToString() + in_Config("LayoutNC").ToString()]</InArgument>
+            <InArgument x:TypeArguments="x:String">[in_Config("CarpetaInput").ToString() + in_Config("LayoutNC").ToString()]</InArgument>
           </Assign.Value>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
         </Assign>
         <TryCatch DisplayName="Try Catch Main" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="TryCatch_9">
           <sap:WorkflowViewStateService.ViewState>

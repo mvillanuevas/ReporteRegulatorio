@@ -108,7 +108,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="1174,1100" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="1667,938" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Exists" />
     </Sequence.Variables>
@@ -118,8 +118,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Get Transaction Item" sap:VirtualizedContainerService.HintSize="585,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Get the transaction item&quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="585,57" sap2010:WorkflowViewState.IdRef="Assign_21">
+    <ui:LogMessage DisplayName="Log Message Get Transaction Item" sap:VirtualizedContainerService.HintSize="515,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Get the transaction item&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="515,57" sap2010:WorkflowViewState.IdRef="Assign_21">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[out_StatusTask]</OutArgument>
       </Assign.To>
@@ -133,59 +133,48 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:FileExistsX DisplayName="File Exists" Exists="[Exists]" sap:VirtualizedContainerService.HintSize="585,165" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[in_Config(&quot;WorkbookPathRexmex&quot;).ToString()]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="585,610" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="549,508" sap2010:WorkflowViewState.IdRef="Sequence_26">
+    <ui:FileExistsX DisplayName="File Exists" Exists="[Exists]" sap:VirtualizedContainerService.HintSize="515,165" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[in_Config(&quot;WorkbookPathRexmex&quot;).ToString()]" />
+    <If Condition="[Not Exists]" sap:VirtualizedContainerService.HintSize="515,448" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,230" sap2010:WorkflowViewState.IdRef="Sequence_24">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[Not Exists]" sap:VirtualizedContainerService.HintSize="515,448" sap2010:WorkflowViewState.IdRef="If_2">
-            <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,230" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,170" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-                  <ui:MultipleAssign.AssignOperations>
-                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:Boolean">[out_StatusTask]</OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:String">[out_ErrorMessage]</OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">["No existe el archivo: " + in_Config("WorkbookPathRexmex").ToString()]</InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                    </scg:List>
-                  </ui:MultipleAssign.AssignOperations>
-                </ui:MultipleAssign>
-              </Sequence>
-            </If.Then>
-            <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="513,89" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </Sequence>
-            </If.Else>
-          </If>
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,170" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Boolean">[out_StatusTask]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[out_ErrorMessage]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">["No existe el archivo: " + in_Config("WorkbookPathRexmex").ToString()]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
         </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="513,89" sap2010:WorkflowViewState.IdRef="Sequence_25">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
   </Sequence>
 </Activity>
