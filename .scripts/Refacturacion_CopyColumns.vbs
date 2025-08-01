@@ -46,7 +46,7 @@ For i = LBound(proveedores) To UBound(proveedores)
         If objWorkbookSheetRefL.Cells(objWorkbookSheetRefL.Rows.Count, 4).End(-4162).Row = 6 Then
             pasteLastRow = 7
         Else
-            pasteLastRow = objWorkbookSheetRefL.Cells(objWorkbookSheetRefL.Rows.Count, 4).End(-4162).Row + 2
+            pasteLastRow = objWorkbookSheetRefL.Cells(objWorkbookSheetRefL.Rows.Count, 4).End(-4162).Row + 1
         End If
         
         ' AP (col 42) -> D (col 4)
@@ -170,9 +170,9 @@ For i = LBound(proveedores) To UBound(proveedores)
         objWorkbookSheetRefL.Range("AE7").AutoFill objWorkbookSheetRefL.Range("AE7:AE" & fillLastRow)
 
         ' Limpiar una fila vacía antes de pegar los datos
-        If pasteLastRow > 7 Then
-            objWorkbookSheetRefL.Rows(pasteLastRow - 1).ClearContents
-        End If
+        'If pasteLastRow > 7 Then
+            'objWorkbookSheetRefL.Rows(pasteLastRow - 1).ClearContents
+        'End If
 
         ' Rellenar con autofill el valor REP en la columna B de objWorkbookSheetRefL
         Dim bStart, bEnd

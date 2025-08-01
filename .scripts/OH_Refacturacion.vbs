@@ -61,6 +61,10 @@ If Not foundCell Is Nothing Then
             objWorkbookSheetRef.Cells(filaOH, 29).Value = objWorkbookSheetOH.Cells(rowNumber, i).Value
             Folio = Folio + 1
             filaOH = filaOH + 1
+            ' Si la longitud de la variable "Folio" es menor a 6, agregar ceros a la izquierda con la cantidad de dígitos necesarios
+            If Len(Folio) < 6 Then
+                Folio = Right(String(6, "0") & Folio, 6)
+            End If
         End If
     Next
     ' Ultima fila
