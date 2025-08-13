@@ -43,14 +43,14 @@ Dim results()
 lastRow = objWorkbookSheetRef.Cells(objWorkbookSheetRef.Rows.Count, 1).End(-4162).Row ' -4162 = xlUp
 
 If lastRow > 1 Then
+
     objWorkbookSheetRef.Activate
+    
     Set rng = objWorkbookSheetRef.Range("A1:AV" & lastRow)
     ' Limpiar campos de ordenamiento anteriores
     objWorkbookSheetRef.Sort.SortFields.Clear
-
     ' Agregar primer criterio: AG2:AG260 ascendente
     objWorkbookSheetRef.Sort.SortFields.Add rng.Columns(33), 0, 1, , 0   ' 0 = xlSortOnValues, 1 = xlAscending, último 0 = xlSortNormal
-
     ' Agregar segundo criterio: AA2:AA260 descendente
     objWorkbookSheetRef.Sort.SortFields.Add rng.Columns(27), 0, 2, , 0   ' 0 = xlSortOnValues, 2 = xlDescending, último 0 = xlSortNormal
 
