@@ -35,7 +35,6 @@ Dim wbsDict, wbsDictH, pepCounterDict
 Set wbsDict     = CreateObject("Scripting.Dictionary")
 Set wbsDictH    = CreateObject("Scripting.Dictionary")
 Set pepCounterDict = CreateObject("Scripting.Dictionary")
-Set negative = CreateObject("Scripting.Dictionary")
 
 Dim data, rowNum, totalRows
 Dim wbsValue, agValue, sKey
