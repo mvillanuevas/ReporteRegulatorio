@@ -8,9 +8,9 @@ ActualMonth = CInt(objArgs(2))
 TipoDocto = objArgs(3)
 anio = CInt(objArgs(4))
 
-'WorkbookPathRexmex = "C:\Users\HE678HU\OneDrive - EY\.Repsol\Reporte Regulatorio\4 - Abril\Files\Refacturacion_Test\REXMEX - Cuenta Operativa 2025_080725.xlsx"
-'WorkbookPathRef = "C:\Users\HE678HU\OneDrive - EY\.Repsol\Reporte Regulatorio\4 - Abril\Files\Refacturacion_Test\Layout refacturación.xlsx"
-'ActualMonth = 6
+'WorkbookPathRexmex = "C:\ReporteRegulatorioRpa\Input\REXMEX - Cuenta Operativa 072025.xlsx"
+'WorkbookPathRef = "C:\ReporteRegulatorioRpa\Input\Layout refacturación.xlsx"
+'ActualMonth = 7
 'TipoDocto = "<>NC"
 'anio = 2025
 

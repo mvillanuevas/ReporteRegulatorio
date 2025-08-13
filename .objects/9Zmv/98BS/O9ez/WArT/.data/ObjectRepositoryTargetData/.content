@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="e98N7WfzikeHKIKGmk4TtQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="bc9378eb-9522-46bf-b9f7-1553c26f0025" CvElementArea="462, 78, 17, 17" CvTextArea="482, 80, 52, 12" CvTextArgument="Productivo" CvType="RadioButton" DesignTimeRectangle="464, 78, 76, 17" ElementType="RadioButton" FullSelectorArgument="&lt;wnd ctrlname='grpAmbiente' /&gt;&lt;wnd ctrlname='rdbProductivo' /&gt;" Guid="1d4bad69-1611-4c52-b2e5-60260601b2b0" ScopeSelectorArgument="&lt;wnd app='eytimbrado.exe' ctrlname='frmTimbrado' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="bc9378eb-9522-46bf-b9f7-1553c26f0025" CvTextArea="318, 42, 46, 12" CvTextArgument="Ambiente" CvType="Text" DesignTimeRectangle="318, 42, 46, 12" ElementType="Text" Guid="0655c260-8615-4e10-84db-7f00d092be8e" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="bec148f1a58875f2838c8dcc409ad6a2.png" xmlns="">0ruwjtVmv-EOuultPZ78o0Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -6,5 +6,13 @@
     "UnresolvedTypeFullyQualifiedName": null,
     "Expression": null,
     "IsLiteral": false
+  },
+  {
+    "Constant": false,
+    "Name": "ApplicationPath_CFDI",
+    "TypeFullyQualifiedName": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+    "UnresolvedTypeFullyQualifiedName": null,
+    "Expression": "\"C:\\Users\\se109874\\AppData\\Local\\Apps\\2.0\\J71J9NX8.WHC\\JKDZNQ83.4E1\\eyti..tion_de82518fbe9ca90c_0001.0000_842a6c8b1d223f4b\\eytimbrado.exe\"",
+    "IsLiteral": false
   }
 ]

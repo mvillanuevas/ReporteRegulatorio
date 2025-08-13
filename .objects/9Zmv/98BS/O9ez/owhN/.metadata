@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Procesando...",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "owhNA_pIs0yLNk-SBplbYA",
+  "Reference": "Cf07JwYvEkuJqoqAAR1IDA/owhNA_pIs0yLNk-SBplbYA",
+  "ParentRef": "Cf07JwYvEkuJqoqAAR1IDA/O9ezPp6uzEiRKiKprx_zBQ",
+  "Created": "2025-08-13T18:49:50.9734747Z",
+  "Updated": "2025-08-13T18:49:50.9734747Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

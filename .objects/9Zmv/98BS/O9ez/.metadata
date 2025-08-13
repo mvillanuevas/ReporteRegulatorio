@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Timbrado CFDI",
+  "Type": "Screen",
+  "Id": "O9ezPp6uzEiRKiKprx_zBQ",
+  "Reference": "Cf07JwYvEkuJqoqAAR1IDA/O9ezPp6uzEiRKiKprx_zBQ",
+  "ParentRef": "Cf07JwYvEkuJqoqAAR1IDA/98BSrZifyUumeYZ1_JDGUw",
+  "Created": "2025-08-12T23:07:49.1123415Z",
+  "Updated": "2025-08-12T23:07:49.1123415Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

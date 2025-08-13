@@ -54,8 +54,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
@@ -74,6 +72,8 @@
       <x:String>UiPath.Shared.Activities.Business</x:String>
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -136,24 +136,29 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>NPOI.Core</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Timbrado_CFDI" sap:VirtualizedContainerService.HintSize="1081,3233" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Timbrado_CFDI" sap:VirtualizedContainerService.HintSize="1289,957" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="C:\Users\se109874\AppData\Local\Apps\2.0\J71J9NX8.WHC\JKDZNQ83.4E1\eyti..tion_de82518fbe9ca90c_0001.0000_842a6c8b1d223f4b\eytimbrado.exe" Name="ApplicationPath_CFDI" />
+      <Variable x:TypeArguments="x:String" Name="ApplicationPath_CFDI">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\se109874\AppData\Local\Apps\2.0\J71J9NX8.WHC\JKDZNQ83.4E1\eyti..tion_de82518fbe9ca90c_0001.0000_842a6c8b1d223f4b\eytimbrado.exe</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="CFDI" sap:VirtualizedContainerService.HintSize="626,3210" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="CFDI" sap:VirtualizedContainerService.HintSize="518,934" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Timbrado_CFDI&quot;]">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Timbrado_CFDI&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -161,7 +166,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <Assign sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Boolean">[StatusTask]</OutArgument>
         </Assign.To>
@@ -175,19 +180,19 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="592,757" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="3" StartAt="1">
+      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="484,418" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="3" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItem" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,561" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,222" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="418,57" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Intento: &quot; + CurrentItem.ToString()]">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Intento: &quot; + CurrentItem.ToString()]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -195,33 +200,35 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,396" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,108" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="False" DisplayName="Timbrado CFDI" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="20bdeb0f-5078-454e-a788-55fbb81cce9f" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="False" DisplayName="Timbrado CFDI" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="479,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="20bdeb0f-5078-454e-a788-55fbb81cce9f" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1309" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1800" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="cfdi_Attribute" />
+                              <Variable x:TypeArguments="ui:UiElement" Name="FindElement" />
                             </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Inicia App&quot;]">
@@ -232,12 +239,12 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:LogMessage>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click ''Productivo''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="20bdeb0f-5078-454e-a788-55fbb81cce9f" Version="V5">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ambiente'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="20bdeb0f-5078-454e-a788-55fbb81cce9f" Version="V5">
                               <uix:NClick.Target>
-                                <uix:TargetAnchorable CVScreenId="09881187-987c-4203-971c-1d5d5cc6a29f" CvElementArea="361, 78, 17, 17" CvTextArea="380, 80, 18, 12" CvTextArgument="QA" CvType="RadioButton" DesignTimeRectangle="363, 78, 40, 17" ElementType="RadioButton" FullSelectorArgument="&lt;wnd ctrlname='grpAmbiente' /&gt;&lt;wnd ctrlname='rdbQa' /&gt;" Guid="ca14c5f9-774f-4956-b81a-c8003e1eac95" InformativeScreenshot="4849a52333d00650daf3f505317fbf59.png" ScopeSelectorArgument="&lt;wnd app='eytimbrado.exe' ctrlname='frmTimbrado' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                                <uix:TargetAnchorable CVScreenId="bc9378eb-9522-46bf-b9f7-1553c26f0025" ContentHash="e98N7WfzikeHKIKGmk4TtQ" CvElementArea="462, 78, 17, 17" CvTextArea="482, 80, 52, 12" CvTextArgument="Productivo" CvType="RadioButton" DesignTimeRectangle="464, 78, 76, 17" ElementType="RadioButton" FullSelectorArgument="&lt;wnd ctrlname='grpAmbiente' /&gt;&lt;wnd ctrlname='rdbProductivo' /&gt;" Guid="1d4bad69-1611-4c52-b2e5-60260601b2b0" InformativeScreenshot="bec148f1a58875f2838c8dcc409ad6a2.png" Reference="Cf07JwYvEkuJqoqAAR1IDA/WArTCb2wwUyJnUQnwUzPLg" ScopeSelectorArgument="&lt;wnd app='eytimbrado.exe' ctrlname='frmTimbrado' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target CVScreenId="09881187-987c-4203-971c-1d5d5cc6a29f" CvTextArea="318, 42, 46, 12" CvTextArgument="Ambiente" CvType="Text" DesignTimeRectangle="318, 42, 46, 12" ElementType="Text" Guid="534f254c-c51c-40f1-8cc9-a6584378f3a3" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target CVScreenId="bc9378eb-9522-46bf-b9f7-1553c26f0025" CvTextArea="318, 42, 46, 12" CvTextArgument="Ambiente" CvType="Text" DesignTimeRectangle="318, 42, 46, 12" ElementType="Text" Guid="0655c260-8615-4e10-84db-7f00d092be8e" SearchSteps="CV" TargetType="ComputerVisionBased" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
                                 </uix:TargetAnchorable>
@@ -325,49 +332,27 @@
                                 </uix:VerifyExecutionOptions>
                               </uix:NClick.VerifyOptions>
                             </uix:NClick>
-                            <Delay Duration="00:00:20" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[cfdi_Attribute.Contains(&quot;Procesando&quot;)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="416,50" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
-                              <ui:InterruptibleDoWhile.Body>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,587" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DisplayName="Get Attribute 'Procesando...(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,239" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[cfdi_Attribute]" ScopeIdentifier="20bdeb0f-5078-454e-a788-55fbb81cce9f" Version="V5">
-                                    <uix:NGetAttributeGeneric.Target>
-                                      <uix:TargetAnchorable CVScreenId="0ef2255a-9884-462a-8d78-22703a090e53" ContentHash="OFT-z1w3dEmZZDH7SGKnMA" CvElementArea="19, 184, 499, 27" CvType="InputBox" DesignTimeRectangle="22, 191, 73, 13" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlname='lblMensaje' /&gt;" Guid="e3549238-8b2c-4af6-b3f2-35887375f90f" InformativeScreenshot="eda2c2a17a290644003945e6d876bd0c.png" Reference="LlLgfoQpLUq-tToeno2L6w/wR2KDFBjf0e0McNqrpg5vA" ScopeSelectorArgument="&lt;wnd app='eytimbrado.exe' ctrlname='frmTimbrado' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target CVScreenId="0ef2255a-9884-462a-8d78-22703a090e53" CvElementArea="19, 184, 499, 27" CvType="InputBox" DesignTimeRectangle="18, 184, 500, 26" FuzzySelectorArgument="&lt;wnd ctrlname='prBar' matching:ctrlname='fuzzy' fuzzylevel:ctrlname='0.0' check:text='45%' /&gt;" Guid="6c44f5d6-2e86-4d82-b47d-450d7bcd9d9b" SearchSteps="FuzzySelector, CV" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NGetAttributeGeneric.Target>
-                                  </uix:NGetAttributeGeneric>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,175" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[cfdi_Attribute]">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:LogMessage>
-                                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                                </Sequence>
-                              </ui:InterruptibleDoWhile.Body>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:InterruptibleDoWhile>
+                            <Delay Duration="00:01:00" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="False" DisplayName="Find Element 'WindowsForms10.STATIC.a...'" FoundElement="[FindElement]" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
+                              <ui:WaitUiElementAppear.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5f27aba6-d0cc-4cc4-ae5a-8016446e76e5" InformativeScreenshot="1901341416b59cf65cc206d9509f4c14" Selector="&lt;wnd ctrlname='lblMensaje' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:WaitUiElementAppear.Target>
+                            </ui:WaitUiElementAppear>
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Valida" />
+                            <ui:WaitAttribute Attribute="aaname" AttributeValue="[&quot;Se procesaron todos los XML&quot;]" ContinueOnError="False" DisplayName="Wait Attribute" Element="[FindElement]" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="WaitAttribute_4" TimeoutMS="10800000" />
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Existe" />
                           </Sequence>
                         </ActivityAction>
                       </uix:NApplicationCard.Body>
                       <uix:NApplicationCard.TargetApp>
-                        <uix:TargetApp Area="2150, 173, 616, 228" ContentHash="0GnX9B0cg0iObhoIy07yCg" FilePath="[ApplicationPath_CFDI]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALeSURBVFhH1ZfJr0xBFIcfiYVZzMOGpRUbNkgsDCuRWGBBJOYpQUjMIhFi/gdICBv+AyzYIAQhrEiIIVizME/f1++dpLq77s3t7mfxfsmXvjXcqnOrTp063dUXNQbmwybY34PP1tn2XzQENsAd+AF/C7DNPvYdDB2rP6yHD5CbsAzfWQf9oC2NhRvQOPB3uA/n4RgchXNwD2xr7H8dWt6aKfAC0oFewzYoG2w0bIVXkL77HCbDAbgFN2EaZOWXp5P/ghPQyp4OAlfmJ6RGPEzKi6FJ7le67N9gCbSrRfAFYryUrAF6b3TwyzuZPKQR6UoETQZ41D5CdDgJVbUcjAcufU5HIJ1cmgzYCNH4Bqru+TD4DJ/Aj8hpILyEUgPuQjTusKKiVoLvXKqVirUZYnypM8CjFRHO33FQpMbAEk5rKC4LOiNBp84a4NLthYOwxoqM3N9TMKtW6tYk0FnfwgCYDfpOkS+sAucwHky0oqpmwjPQ8jlW9GgXWKdhai5Ytq/v9IpcmdieK6DThZ7AH4ioNhyugn0Ny3ugYzlIxHgHHwFqOjj541qpW7alBuyGXlG6BS6zOg2Wd9ZK3YoteAozrKiq8XAIDsNqKzLyLOtgOpoO9w50wNSZbPPesG9OXu3OoRPWxYyFoOXiURkFRfKoLQD7etWmKjuGEyBCsj5Vd6umBsgWKNNlsN+KWqma4sSIWVOdGg0wbBad5aEQodfnKrKfWxbje+nVqdEA8T7PScO8eJbVStV0FmJcU7WmOyNngPvVdGG0oaXwG2Jc88Qm5QyQr9CJEU6e5onXIOuoqQEPwPQpyh6149BKSuaen4H0yx2zMJ+cCiaKJoyeURPI1AgxKd0O5oxFMp4YmFKHk0hKW5LWumTpQOIZdpUugEFHLsIjiDsjxTHKMulSuV9roZ0/Ju/Bd8uCU2W5/4bR25D7ykCHs499e+WvWU7++ZgH5pD7evDZOtv6krq6/gHDsCGKYQ4Y0QAAAABJRU5ErkJggg==" InformativeScreenshot="d70f42e65d84a1f3fd64373bed8272d5.png" Reference="LlLgfoQpLUq-tToeno2L6w/iA_NSie4_ESwIzT2Jm9k0Q" Selector="&lt;wnd app='eytimbrado.exe' ctrlname='frmTimbrado' /&gt;" Version="V2" />
+                        <uix:TargetApp Area="2150, 173, 616, 228" ContentHash="iegAnnbr5kqGOIWCvOlCQQ" FilePath="[ApplicationPath_CFDI]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALeSURBVFhH1ZfJr0xBFIcfiYVZzMOGpRUbNkgsDCuRWGBBJOYpQUjMIhFi/gdICBv+AyzYIAQhrEiIIVizME/f1++dpLq77s3t7mfxfsmXvjXcqnOrTp063dUXNQbmwybY34PP1tn2XzQENsAd+AF/C7DNPvYdDB2rP6yHD5CbsAzfWQf9oC2NhRvQOPB3uA/n4RgchXNwD2xr7H8dWt6aKfAC0oFewzYoG2w0bIVXkL77HCbDAbgFN2EaZOWXp5P/ghPQyp4OAlfmJ6RGPEzKi6FJ7le67N9gCbSrRfAFYryUrAF6b3TwyzuZPKQR6UoETQZ41D5CdDgJVbUcjAcufU5HIJ1cmgzYCNH4Bqru+TD4DJ/Aj8hpILyEUgPuQjTusKKiVoLvXKqVirUZYnypM8CjFRHO33FQpMbAEk5rKC4LOiNBp84a4NLthYOwxoqM3N9TMKtW6tYk0FnfwgCYDfpOkS+sAucwHky0oqpmwjPQ8jlW9GgXWKdhai5Ytq/v9IpcmdieK6DThZ7AH4ioNhyugn0Ny3ugYzlIxHgHHwFqOjj541qpW7alBuyGXlG6BS6zOg2Wd9ZK3YoteAozrKiq8XAIDsNqKzLyLOtgOpoO9w50wNSZbPPesG9OXu3OoRPWxYyFoOXiURkFRfKoLQD7etWmKjuGEyBCsj5Vd6umBsgWKNNlsN+KWqma4sSIWVOdGg0wbBad5aEQodfnKrKfWxbje+nVqdEA8T7PScO8eJbVStV0FmJcU7WmOyNngPvVdGG0oaXwG2Jc88Qm5QyQr9CJEU6e5onXIOuoqQEPwPQpyh6149BKSuaen4H0yx2zMJ+cCiaKJoyeURPI1AgxKd0O5oxFMp4YmFKHk0hKW5LWumTpQOIZdpUugEFHLsIjiDsjxTHKMulSuV9roZ0/Ju/Bd8uCU2W5/4bR25D7ykCHs499e+WvWU7++ZgH5pD7evDZOtv6krq6/gHDsCGKYQ4Y0QAAAABJRU5ErkJggg==" InformativeScreenshot="d70f42e65d84a1f3fd64373bed8272d5.png" Reference="Cf07JwYvEkuJqoqAAR1IDA/O9ezPp6uzEiRKiKprx_zBQ" Selector="&lt;wnd app='eytimbrado.exe' ctrlname='frmTimbrado' /&gt;" Version="V2" />
                       </uix:NApplicationCard.TargetApp>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -384,10 +369,10 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,287" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -407,13 +392,13 @@
                                   <OutArgument x:TypeArguments="x:String">[ExceptionTask]</OutArgument>
                                 </ui:AssignOperation.To>
                                 <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:String">["Task: " + exception.Source.ToString + " Hidrocarburos.vbs" + " Error Message: " + exception.Message.ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String">["Task: " + exception.Source.ToString + " CFDI APP" + " Error Message: " + exception.Message.ToString]</InArgument>
                                 </ui:AssignOperation.Value>
                               </ui:AssignOperation>
                             </scg:List>
                           </ui:MultipleAssign.AssignOperations>
                         </ui:MultipleAssign>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[ExceptionTask]">
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,48" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[ExceptionTask]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -421,13 +406,12 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
-                        <ui:Return sap:VirtualizedContainerService.HintSize="479,48" sap2010:WorkflowViewState.IdRef="Return_1" />
                       </Sequence>
                     </ActivityAction>
                   </Catch>
                 </TryCatch.Catches>
                 <TryCatch.Finally>
-                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="513,89" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -436,7 +420,7 @@
                   </Sequence>
                 </TryCatch.Finally>
               </TryCatch>
-              <If Condition="[StatusTask]" sap:VirtualizedContainerService.HintSize="418,48" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[StatusTask]" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="If_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -475,13 +459,42 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:RepeatNumberOfTimesX>
-      <Sequence DisplayName="Resultados" sap:VirtualizedContainerService.HintSize="592,2256" sap2010:WorkflowViewState.IdRef="Sequence_26">
+      <If Condition="[Not StatusTask]" sap:VirtualizedContainerService.HintSize="484,271" sap2010:WorkflowViewState.IdRef="If_13">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_52">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Return sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Return_6" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_53">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <Sequence DisplayName="Resultados" sap:VirtualizedContainerService.HintSize="484,48" sap2010:WorkflowViewState.IdRef="Sequence_26">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="vbsResult" />
         </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -654,15 +667,9 @@
                                               <ui:InvokeVBScript KillOnTimeout="{x:Null}" RunInBatchMode="{x:Null}" TimeoutMS="{x:Null}" UnicodeSupport="{x:Null}" DisplayName="Invoke VBScript" FileName=".scripts\Run_Macro.vbs" sap:VirtualizedContainerService.HintSize="479,178" sap2010:WorkflowViewState.IdRef="InvokeVBScript_4" Result="[vbsResult]" WaitForOutput="True">
                                                 <ui:InvokeVBScript.Arguments>
                                                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                                    <InArgument x:TypeArguments="x:String">
-                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;&quot;&quot;&quot; + WorkbookPathRefacturacionRegular + &quot;&quot;&quot;&quot;" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String">
-                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;&quot;&quot;&quot; + Path.GetFileName(WorkbookPathRefacturacionRegular) + &quot;&quot;&quot;&quot;" />
-                                                    </InArgument>
-                                                    <InArgument x:TypeArguments="x:String">
-                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;&quot;&quot;&quot; + &quot;paso3_Reporte&quot; + &quot;&quot;&quot;&quot;" />
-                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String">["""" + WorkbookPathRefacturacionRegular + """"]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String">["""" + Path.GetFileName(WorkbookPathRefacturacionRegular) + """"]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String">["""" + "paso3_Reporte" + """"]</InArgument>
                                                   </scg:List>
                                                 </ui:InvokeVBScript.Arguments>
                                                 <sap:WorkflowViewStateService.ViewState>

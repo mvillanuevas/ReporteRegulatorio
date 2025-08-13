@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="iegAnnbr5kqGOIWCvOlCQQ" Reference="LlLgfoQpLUq-tToeno2L6w/iA_NSie4_ESwIzT2Jm9k0Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="2150, 173, 616, 228" ContentHash="0GnX9B0cg0iObhoIy07yCg" FilePath="[ApplicationPath_CFDI]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALeSURBVFhH1ZfJr0xBFIcfiYVZzMOGpRUbNkgsDCuRWGBBJOYpQUjMIhFi/gdICBv+AyzYIAQhrEiIIVizME/f1++dpLq77s3t7mfxfsmXvjXcqnOrTp063dUXNQbmwybY34PP1tn2XzQENsAd+AF/C7DNPvYdDB2rP6yHD5CbsAzfWQf9oC2NhRvQOPB3uA/n4RgchXNwD2xr7H8dWt6aKfAC0oFewzYoG2w0bIVXkL77HCbDAbgFN2EaZOWXp5P/ghPQyp4OAlfmJ6RGPEzKi6FJ7le67N9gCbSrRfAFYryUrAF6b3TwyzuZPKQR6UoETQZ41D5CdDgJVbUcjAcufU5HIJ1cmgzYCNH4Bqru+TD4DJ/Aj8hpILyEUgPuQjTusKKiVoLvXKqVirUZYnypM8CjFRHO33FQpMbAEk5rKC4LOiNBp84a4NLthYOwxoqM3N9TMKtW6tYk0FnfwgCYDfpOkS+sAucwHky0oqpmwjPQ8jlW9GgXWKdhai5Ytq/v9IpcmdieK6DThZ7AH4ioNhyugn0Ny3ugYzlIxHgHHwFqOjj541qpW7alBuyGXlG6BS6zOg2Wd9ZK3YoteAozrKiq8XAIDsNqKzLyLOtgOpoO9w50wNSZbPPesG9OXu3OoRPWxYyFoOXiURkFRfKoLQD7etWmKjuGEyBCsj5Vd6umBsgWKNNlsN+KWqma4sSIWVOdGg0wbBad5aEQodfnKrKfWxbje+nVqdEA8T7PScO8eJbVStV0FmJcU7WmOyNngPvVdGG0oaXwG2Jc88Qm5QyQr9CJEU6e5onXIOuoqQEPwPQpyh6149BKSuaen4H0yx2zMJ+cCiaKJoyeURPI1AgxKd0O5oxFMp4YmFKHk0hKW5LWumTpQOIZdpUugEFHLsIjiDsjxTHKMulSuV9roZ0/Ju/Bd8uCU2W5/4bR25D7ykCHs499e+WvWU7++ZgH5pD7evDZOtv6krq6/gHDsCGKYQ4Y0QAAAABJRU5ErkJggg==" Reference="LlLgfoQpLUq-tToeno2L6w/iA_NSie4_ESwIzT2Jm9k0Q" Selector="&lt;wnd app='eytimbrado.exe' ctrlname='frmTimbrado' /&gt;" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="d70f42e65d84a1f3fd64373bed8272d5.png" xmlns="">0acCVYOqc-kKQWqcWTD-cyQ</imageRef>
+    </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="C:\Users\se109874\AppData\Local\Apps\2.0\J71J9NX8.WHC\JKDZNQ83.4E1\eyti..tion_de82518fbe9ca90c_0001.0000_842a6c8b1d223f4b\eytimbrado.exe" Name="ApplicationPath_CFDI" />
+    </scg:List>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>
