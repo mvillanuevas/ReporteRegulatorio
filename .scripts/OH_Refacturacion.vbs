@@ -7,9 +7,9 @@ WorkbookPathOH = objArgs(1)
 periodo = objArgs(2)
 Folio = objArgs(3)
 
-'WorkbookPathRef = "C:\ReporteRegulatorioRpa\Input\Refacturacion_regular_v2 junio 2025.xlsm"
-'WorkbookPathOH = "C:\ReporteRegulatorioRpa\Input\REXM - Overhead facturable junio 2025.xlsx"
-'periodo = "Junio 2025"
+'WorkbookPathRef = "C:\ReporteRegulatorioRpa\Input\Refacturacion_regular_v2.xlsm"
+'WorkbookPathOH = "C:\ReporteRegulatorioRpa\Input\REXM - Overhead facturable julio 2025.xlsx"
+'periodo = "Julio 2025"
 'Folio = "618"
 
 Folio = CInt(Folio)
@@ -25,6 +25,7 @@ objExcel.Application.DisplayAlerts = False
 
 Set objWorkbookPathRef = objExcel.Workbooks.Open(WorkbookPathRef, 0)
 Set objWorkbookSheetRef= objWorkbookPathRef.Worksheets("OH")
+Set objWorkbookSheetCat= objWorkbookPathRef.Worksheets("Catalogo")
 
 Set objWorkbookPathOH = objExcel.Workbooks.Open(WorkbookPathOH, 0)
 Set objWorkbookSheetOH = objWorkbookPathOH.Worksheets("Sheet2")
@@ -34,9 +35,10 @@ Const xlValues = -4163
 
 ' Establece rango de busqueda en la columna C
 Set nRange = objWorkbookSheetOH.Range("A:A")
+Set cRange = objWorkbookSheetCat.Range("A:A")
 ' En la columna A de la hoja OH, buscar el valor "BL29" y obtener la fila
 Dim foundCell : Set foundCell = nRange.Find("BL29",,xlValues,xlPart)
-
+Dim CatCell 
 fechaActual = DateSerial(Year(Date), Month(Date), Day(Date))
 
 ' Si la longitud de la variable "Folio" es menor a 6, agregar ceros a la izquierda con la cantidad de dígitos necesarios
@@ -58,6 +60,19 @@ If Not foundCell Is Nothing Then
             objWorkbookSheetRef.Cells(filaOH, 4).Value = fechaActual
             ' Reemplazar el valor " <<Periodo>>" de la columna 28 por la variable "Periodo"
             objWorkbookSheetRef.Cells(filaOH, 28).Value = Replace(objWorkbookSheetRef.Cells(filaOH, 28).Value, "<<Periodo>>", periodo)
+            proveedor = Trim(objWorkbookSheetOH.Cells(4, i).Value)
+            Set CatCell = cRange.Find(proveedor,,xlValues,xlPart)
+            If Not CatCell Is Nothing Then
+                CatCellRow = CatCell.Row
+                rfc = objWorkbookSheetCat.Cells(CatCellRow, 2).Value
+                razonSocial = objWorkbookSheetCat.Cells(CatCellRow, 3).Value
+                cp = objWorkbookSheetCat.Cells(CatCellRow, 4).Value
+                regimen = objWorkbookSheetCat.Cells(CatCellRow, 5).Value
+            End If
+            objWorkbookSheetRef.Cells(filaOH, 16).Value = rfc
+            objWorkbookSheetRef.Cells(filaOH, 17).Value = razonSocial
+            objWorkbookSheetRef.Cells(filaOH, 18).Value = cp
+            objWorkbookSheetRef.Cells(filaOH, 21).Value = regimen
             objWorkbookSheetRef.Cells(filaOH, 29).Value = objWorkbookSheetOH.Cells(rowNumber, i).Value
             Folio = Folio + 1
             filaOH = filaOH + 1
@@ -70,7 +85,9 @@ If Not foundCell Is Nothing Then
     ' Ultima fila
     lastRowOH = objWorkbookSheetRef.Cells(objWorkbookSheetRef.Rows.Count, 3).End(-4162).Row
     objWorkbookSheetRef.Range("A2:B2").AutoFill objWorkbookSheetRef.Range("A2:B" & lastRowOH), 1
-    objWorkbookSheetRef.Range("E2:AB2").AutoFill objWorkbookSheetRef.Range("E2:AB" & lastRowOH), 1
+    objWorkbookSheetRef.Range("E2:O2").AutoFill objWorkbookSheetRef.Range("E2:O" & lastRowOH), 1
+    objWorkbookSheetRef.Range("S2:T2").AutoFill objWorkbookSheetRef.Range("S2:T" & lastRowOH), 1
+    objWorkbookSheetRef.Range("V2:AB2").AutoFill objWorkbookSheetRef.Range("V2:AB" & lastRowOH), 1
     objWorkbookSheetRef.Range("AD2:GC2").AutoFill objWorkbookSheetRef.Range("AD2:GC" & lastRowOH), 1
 
     objWorkbookSheetRef.Range("D2:D" & lastRowOH).NumberFormat = "dd/mm/yyyy"
