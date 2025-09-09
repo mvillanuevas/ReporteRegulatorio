@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="G8cCpQh2nkqvRP-3U1psPw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="banxico.org.mx/tipcamb/tipCamMIAction.do" CVScreenId="978a38f4-2029-46e9-a99e-dec6a98d95dd" DesignTimeRectangle="131, 87, 103, 22" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Download item' role='outline item' /&gt;&lt;ctrl name='Guardar como' role='push button' /&gt;" Guid="a88de20c-0812-4de1-b944-a5e2728724aa" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="978a38f4-2029-46e9-a99e-dec6a98d95dd" DesignTimeRectangle="71, 67, 206, 16" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Descargas' role='document' /&gt;&lt;ctrl name='Download item' role='outline item' /&gt;&lt;ctrl name='¿Qué quiere hacer con*' role='text' /&gt;" Guid="0f54581e-9d04-4d15-9dc0-371341c60416" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="dfe25650234a1d35c63acd29c955153f.png" xmlns="">0B6vSgC3mRE6fgGJ7L5xP6w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

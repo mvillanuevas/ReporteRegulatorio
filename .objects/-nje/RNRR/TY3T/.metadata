@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge SIE - Mercado cambiario",
+  "Type": "Screen",
+  "Id": "TY3TorzPwUaLB6YGxAgkNA",
+  "Reference": "Cf07JwYvEkuJqoqAAR1IDA/TY3TorzPwUaLB6YGxAgkNA",
+  "ParentRef": "Cf07JwYvEkuJqoqAAR1IDA/RNRRuA1c2kqt14JbyLBb2Q",
+  "Created": "2025-09-09T00:44:20.0993903Z",
+  "Updated": "2025-09-09T00:44:20.0993903Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

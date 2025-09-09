@@ -67,6 +67,10 @@ If Not foundCell Is Nothing Then
                 rfc = objWorkbookSheetCat.Cells(CatCellRow, 2).Value
                 razonSocial = objWorkbookSheetCat.Cells(CatCellRow, 3).Value
                 cp = objWorkbookSheetCat.Cells(CatCellRow, 4).Value
+                ' Si cp tiene menos de 4 digitos, agregar ceros a la izquierda hasta tener 4 digitos
+                If Len(cp) < 4 Then
+                    cp = "'" & Right(String(4, "0") & cp, 4)
+                End If
                 regimen = objWorkbookSheetCat.Cells(CatCellRow, 5).Value
             End If
             objWorkbookSheetRef.Cells(filaOH, 16).Value = rfc

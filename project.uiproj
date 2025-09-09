@@ -1,0 +1,6 @@
+{
+  "Name": "Reporte-Regulatorio_Refacturacion",
+  "ProjectType": "Process",
+  "Description": "Reporte-Regulatorio_Refacturacion",
+  "MainFile": "Main.xaml"
+}
